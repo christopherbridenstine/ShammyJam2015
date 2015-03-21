@@ -43,7 +43,7 @@ public class CursorManager : MonoBehaviour {
 		if (Vector3.Distance (cursorObject.transform.position, cursorGridPosition) >= moveSpeed / Time.deltaTime) {
 			cursorObject.transform.position = cursorGridPosition;
 		} else {
-			cursorObject.transform.position += ((cursorGridPosition - cursorObject.transform.position).normalized * moveSpeed / Time.deltaTime);
+			cursorObject.transform.position += ((cursorObject.transform.position - cursorGridPosition).normalized * moveSpeed / Time.deltaTime);
 		}
 	}
 
